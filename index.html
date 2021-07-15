@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste of Vue 3</title>
+
+</head>
+<body>
+    <div id="app">
+        {{firstName}} {{lastName}}
+        
+        <h1>{{imageName}}</h1>
+        <!-- Attribute Binding -->
+
+        <!-- v-bind:src -->
+
+        <!-- <img v-bind:src="imageSource" alt=""> -->
+        <!-- Binding shorthand -->        
+        <img :src="imageSource" v-bind:alt="imageDescription" :style="imageStyle" />
+
+        <!-- v-bind:src && v-bind:class -->
+        <div :class="classObject">Hello {{firstName}}</div>
+
+        <!-- Style objects -->
+        <div :style="styleObject">Hello again</div>
+    </div>
+
+
+    <!-- Import Vue.js core library -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- Import Vue app -->
+    <script src="./index.js"></script>
+    <!-- <script>
+        //replace following by call mount immediately after creating Vue app
+        //Registering and mounting app
+        app.mount('#app');
+    </script> -->
+</body>
+</html>
